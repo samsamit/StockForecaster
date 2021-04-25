@@ -1,5 +1,12 @@
+# Tekninen analyysi
+Tekninen analyysi on yksi analysoinnin menetelmistä, joita käytetään kun analysoidaan osakkeita. Tekninen analyysi perustuu mm. osakkeen hintaan (jollakin aikavälillä), volatiliteettiin (kuinka paljon osaketta myydään/ostetaan) ja moniin muihin lukuihin. Alla on linkki, jossa teknistä analyysia ja erilaisia analyysimenetelmiä on avattu.
+
+https://www.investopedia.com/terms/t/technical-analysis-of-stocks-and-trends.asp
+
 # RSI - Relative Strength Index
-RSI:in tarkoitus on saada selville, onko osake "yliostettu vai -myyty". 50 on keskiarvo 
+RSI:in tarkoitus on saada selville, onko osake "yliostettu vai -myyty". 50 = osake on vakaa, 70 tai yli = yliostettu, 30 tai alle = ylimyyty.
+
+
 
 
 
@@ -15,8 +22,8 @@ import requests
 import xlsxwriter
 import math
 
-shutil.rmtree("C:\Users\maksi\Desktop\Sijoittaminen")
-os.mkdir("C:\Users\maksi\Desktop\Sijoittaminen")
+shutil.rmtree(" ")
+os.mkdir(" ")
 
 tickers = gt.get_tickers_filtered(mktcap_min=150000, mktcap_max=10000000)
 print("The amount of stocks chosen to observe: " + str(len(tickers)))
@@ -30,7 +37,7 @@ while (i < len(tickers)) and (Amount_of_API_Calls < 1800):
         stock = tickers[i]  # Gets the current stock ticker
         temp = yf.Ticker(str(stock))  # Instantiate the ticker as a stock with Yahoo Finance
         Hist_data = temp.history(period="max")  # Tells yfinance what kind of data we want about this stock (In this example, all of the historical data)
-        Hist_data.to_csv("C:\Users\maksi\Desktop\Sijoittaminen")  # Saves the historical data in csv format for further processing later
+        Hist_data.to_csv(" ")  # Saves the historical data in csv format for further processing later
         time.sleep(2)  # Pauses the loop for two seconds so we don't cause issues with Yahoo Finance's backend operations
         Amount_of_API_Calls += 1
         Stock_Failure = 0
