@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Samu\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+    "python.pythonPath": ".venv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true,
+    "python.formatting.provider": "autopep8"
 }
