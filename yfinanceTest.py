@@ -1,5 +1,5 @@
 import yfinance as yf
-import json
+
 stocks = [
     "MSFT",
     "AAPL",
